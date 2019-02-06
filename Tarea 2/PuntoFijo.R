@@ -40,4 +40,4 @@ puntoFijo = function(a,b,error) {
 puntoFijo(0,1,10e-8)
 curve(gx,-2,2, col="red")
 curve(y,-2,2,col="blue", add = "TRUE")
-matplot(x,cbind(gx(x),y(x)),type="l",col=c("blue","red"))
+matplot(x,cbind(gx(x),y(x),fx(x)),type="l",col=c("blue","red","orange"))
