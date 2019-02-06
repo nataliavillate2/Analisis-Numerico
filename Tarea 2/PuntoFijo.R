@@ -30,6 +30,7 @@ puntoFijo = function(a,b,error) {
         funcionXInicial = xInicial;
         xInicial = y(funcionXInicial);
       }
+      cat("x: ", xInicial, " con: ", iteraciones ," Iteraciones\n")
     }
     cat("Iteraciones =",iteraciones,"Resultado = ",xInicial,"\n")
   }
