@@ -3,9 +3,9 @@ rm(list=ls())
 Efi <- function(num){
   numero = num
   resultado = 0
-  while(n>0){
+  while(numero>0){
     d = numero %% 2
-    n = numero%/%2
+    numero = numero%/%2
     resultado = resultado + 2
     cat(d)
   }
