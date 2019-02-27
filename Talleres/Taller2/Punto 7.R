@@ -1,6 +1,11 @@
+rm(ls=list())
+library(BB)
+#Funcion que determina numericamente la interseccion entre una funcion y una recta
 trigexp = function(x) {
   n = length(x)
+  #Replica el valor de n
   F = rep(NA, n)
+  
   F[1] = 3*x[1]^2 + 2*x[2] - 5 + sin(x[1] - x[2]) * sin(x[1] + x[2])
   tn1 = 2:(n-1)
   F[tn1] = -x[tn1-1] * exp(x[tn1-1] - x[tn1]) + x[tn1] *
@@ -9,7 +14,8 @@ trigexp = function(x) {
   F[n] = -x[n-1] * exp(x[n-1] - x[n]) + 4*x[n] - 3
   F
 }
-n = 10000
+n = 5
 p0 = runif(n) # n initial random starting guesses
 sol = BBsolve(par=p0, fn=trigexp)
+print(sol)
 sol$par
